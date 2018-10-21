@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            border: 0;
+        }
+
+        .image img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 60%;
+    width: 50%;
+    }
+        .display {
+    background:lightcoral;
+    border-bottom: 3px solid pink;
+    
+}
+.display {
+    margin: 0 auto;
+    padding: 1em 5% 2em;
+    width: 100%;
+}
+.fullheight {
+    min-height: 100vh;
+}
+.display {
+    box-sizing: border-box;
+    font-family: europa,sans-serif;
+}
+.card{
+    background:lightsalmon;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0.6em;
+    margin: 10px;
+    
+}
+.button{
+    background: deepskyblue;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    padding: 1em .40em;
+    text-decoration: none;
+    transition:  3s ease;
+    text-align: center;
+}
+p{
+    color: blueviolet;
+}
+.flexbox .list{
+     display: flex;
+    flex-wrap: wrap;
+     max-width: 100%;
+          }
+.flexbox .listitem{
+       display: flex;
+        }
+ @media all and (min-width:40em){
+.list li{
+       width: 50%;
+        list-style-type: none;
+            }
+ .list li{
+      float: left;
+       list-style-type: none;
+            }
+        }
+@media all and (min-width:40em) and (max-width:60em){
+     .list li:nth-child(2n+1){
+    clear: both;
+       list-style-type: none;
+             }
+        }
+@media all and (min-width:60em){
+    .list li{
+      width: 33.33%;
+     list-style-type: none;
+            }
+.list li:nth-child(3n+1){
+          clear: both;
+           list-style-type: none;
+             }
+        }
+.flexbox .card{
+      display: flex;
+    flex-direction: column;
+    width: 100%;   
+        }
+.flexbox .card-content{
+     display: flex;
+     flex: 1 0 auto;
+      flex-direction: column;
+        }
+.flexbox .card-content p{
+     flex: 1 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <figure class="display fullheight">
+    <ul class="list">
+     <li class="listitem">
+         <div class="card">
+             <div class="image">
+              <img src="http://img5.imgtn.bdimg.com/it/u=3155928136,23109883&fm=26&gp=0.jpg" alt="">
+             </div>
+             <div class="card-content">
+              <h3 class="flex-card-heading"></h3>
+              <p>  战争</p>
+              <a href="#" class="button">按键</a>
+             </div>
+           </div>
+         </li>
+         <li class="listitem">
+         <div class="card">
+             <div class="image">
+              <img src="http://img5.imgtn.bdimg.com/it/u=3155928136,23109883&fm=26&gp=0.jpg" alt="">
+             </div>
+             <div class="card-content">
+              <h3 class="flex-card-heading"></h3>
+              <p>  战争</p>
+              <a href="#" class="button">按键</a>
+             </div>
+           </div>
+         </li>
+          <li class="listitem">
+         <div class="card">
+             <div class="image">
+              <img src="http://img5.imgtn.bdimg.com/it/u=3155928136,23109883&fm=26&gp=0.jpg" alt="">
+             </div>
+             <div class="card-content">
+              <h3 class="flex-card-heading"></h3>
+              <p>  战争</p>
+              <a href="#" class="button">按键</a>
+             </div>
+           </div>
+         </li>
+             <li class="listitem">
+         <div class="card">
+             <div class="image">
+              <img src="http://img5.imgtn.bdimg.com/it/u=3155928136,23109883&fm=26&gp=0.jpg" alt="">
+             </div>
+             <div class="card-content">
+              <h3 class="heading"></h3>
+              <p>战争</p>
+              <a href="#" class="button">按键</a>
+             </div>
+           </div>
+         </li>
+         <li class="listitem">
+                <div class="card">
+                    <div class="image">
+                     <img src="http://img5.imgtn.bdimg.com/it/u=3155928136,23109883&fm=26&gp=0.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                     <h3 class="heading"></h3>
+                     <p>战争</p>
+                     <a href="#" class="button">按键</a>
+                    </div>
+                  </div>
+                </li>
+  
+     </ul>
+     <a href="../index.html">返回首页</a>
+</figure>
+</body>
+</html>
