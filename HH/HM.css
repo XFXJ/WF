@@ -1,0 +1,183 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    /* 清除移动端默认的点击高度效果 */
+    -webkit-tap-highlight-color: transparent;
+    /* 设置所有的都是以边框开始计算宽度百分比 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333333;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+input{
+    border: none;
+    outline: none;
+    /* 清除移动端默认的表单样式 */
+    -webkit-appearance: none;
+}
+/* 通用*/
+.f_left
+{
+    float: left;
+}
+.f_right
+{
+    float: left;
+}
+.clearfix::before,.clearfix::after
+{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+[class^="icon_"]
+{
+    background: url()no-repeat;
+    background-size: 200px 200px;
+}
+.m_110
+{
+    margin-left: 10px;
+}
+.m_r10
+{
+    margin-right: 10px;
+}
+.m_b10
+{
+    margin-bottom: 10px;
+}
+.m_t10
+{
+    margin-top: 10px;
+}
+/* 定义顶部通栏 */
+.hm_topBar
+{
+    width: 100%;
+    height: 45px;
+    background: url()repeat-x;
+    background-size: 1px 44px;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+}
+.hn_topBar>[class^="icon_"]
+{
+    position: absolute;
+    top: 0;
+    height: 44px;
+    width: 40px;
+    padding:12px 10px;
+    background-clip: content-box;
+    background-origin: content-box; 
+}
+.hm_topBar>.icon_back
+{
+    left: 0;
+    background-position: -60px 0;
+}
+.hm_topBar>form
+{
+    width: 100%;
+    height: 44px;
+    padding: 0 40px;
+}
+.hm_topBar>form>input
+{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    height: 30px;
+    margin-top: 7px;
+}
+.hm_topBar>h3{
+    text-align: center;
+    line-height: 44px;
+    font-weight: normal;
+}
+/* 头部搜索 */
+.hm_header
+{
+     position: fixed; /*是以窗口最外层容器计算 */
+     left: 0;
+     top: 0;
+     height: 40px;
+     width: 100%;
+     z-index: 1000;
+}
+.hm_header>.hm_header_box
+{
+    width: 100%;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+    background: rgba(201, 20, 35, 0);/*设置透明度*/
+    height: 40px;
+    position: relative;
+}
+.hm_header>.hm_header_box>.icon_logo
+{
+    width: 60px;
+    height: 36px;
+    position: absolute;
+    background-position: 0 -103px;
+    top: 4px;
+    left: 10px;
+
+}
+.hm_header>.hm_header_box>.login
+{
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+}
+.hm_header>.hm_header_box>form
+{
+width: 100%;
+padding-left: 75px;
+padding-right: 50px;
+height: 40px;
+position: relative;
+}
+.hm_header>.hm_header_box>form>input
+{
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.hm_header>.hm_header_box>form>.icon_search
+{
+    height: 20px;
+    width: 20ox;
+    position: absolute;
+    background-position: -60px -109px;
+    top: 10px;
+    left: 85px;
+}
