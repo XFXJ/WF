@@ -44,7 +44,7 @@ footer .messe .lt li input{
 }
 footer .messe .lt li:last-child input{
 	width:120px;
-	height:30px;
+	height:31px;
 	padding-left: 0;
 	border:none;
 	background: url(asc/but.jpg) no-repeat;
