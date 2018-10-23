@@ -11,7 +11,7 @@ footer .loo {
      width: 1000px; 
      height: 100px; 
     margin: 0 auto; 
-     background: url(../38实战开发—制作电商网站首页面/images/logo1.jpg) no-repeat center center; 
+     background: url(asc/logo1.jpg) no-repeat center center; 
 	border-bottom: 1px solid #8c9299; 
 	
 }
@@ -47,7 +47,7 @@ footer .messe .lt li:last-child input{
 	height:30px;
 	padding-left: 0;
 	border:none;
-	background: url(../38实战开发—制作电商网站首页面/images/but.jpg) no-repeat;
+	background: url(asc/but.jpg) no-repeat;
 	}
 footer .messe .ght{
 /*	float: left;*/
