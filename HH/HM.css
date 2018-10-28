@@ -51,7 +51,7 @@ input{
 }
 [class^="icon_"]
 {
-    background: url(tp/9.png)no-repeat;
+    /* background: url(tp/10.png)no-repeat; */
    
      background-size: 200px 200px;  
 }
@@ -139,7 +139,7 @@ input{
 .hm_header>.hm_header_box>.icon_logo
 {
     width: 60px;
-    height: 36px;
+    height: 30px;
     position: absolute;
     background-position: 0 -103px;
     top: 4px;
