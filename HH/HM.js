@@ -27,8 +27,8 @@ else
 searchBox.style.background="rgba(201,21,35,"+opacity+")";
 
     }
-  
-    }
+}
+
     //轮播图
 window.onload=function()
  {
@@ -138,8 +138,13 @@ window.onload=function()
             setTranslateX(-index*w);
         },4000)
     });
+ }
 }
-}
+
+
+
+
+
 window.onload=function()
 {
     function downTime()
@@ -173,3 +178,4 @@ window.onload=function()
         },1000)
     }
 }
+ 
