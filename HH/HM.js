@@ -30,116 +30,116 @@ searchBox.style.background="rgba(201,21,35,"+opacity+")";
 }
 
     //轮播图
-window.onload=function()
- {
-    function banner()
- {
-    var banner=document.querySelector('.hm_banner');
-    var w=banner.offsetWidth;
-    var imageBox=banner.querySelector('ul:first-child');
-    var pointBox=banner.querySelector('ul:last-child');
-    var points=pointBox.querySelector('li');
-    var addTransition=function()
-    {
-        imageBox.style.webkitTransition="all .2s";
-        imageBox.style.transition="all .2s";
-    };
-    var removeTransition=function()
-    {
-          imageBox.style.webkitTransition="none";
-          imageBox.style.transition="none";
-    };
-    var setTranslateX=function(translateX)
-    {
-        imageBox.style.webkitTransform="translateX("+translateX+"px)";
-        imageBox.style.transform="translateX("+translateX+"px)";
-    };
-    var index=1;
-    var timer=setInterval(function()
-    {
-        index ++;
-        addTransition();
-        setTranslateX(-index*w);
-    },4000);
-    itcast.transitionEnd(imageBox,function()
-    {
-        console.log('transitionEnd');
-        if(index>=9)
-        {
-            index=1;
-            removeTransition();
-            setTranslateX(-index*w);
-        }
-        else if(index<=0)
-        {
-            index=8;
-            removeTransition();
-            setTranslateX(-index*w);
-        }
-        setPpint();
-    });
-    var setPoint=function()
-    {
-        for(var i=0; i<points.length; i++)
-        {
-            points[i].className=" ";
-        }
-        points[i].className="now";
-    }
-    var startX=0;
-    var moveX=0;
-    var distanceX=0;
-    var isMove=false;
+// window.onload=function()
+//  {
+//     function banner()
+//  {
+//     var banner=document.querySelector('.hm_banner');
+//     var w=banner.offsetWidth;
+//     var imageBox=banner.querySelector('ul:first-child');
+//     var pointBox=banner.querySelector('ul:last-child');
+//     var points=pointBox.querySelector('li');
+//     var addTransition=function()
+//     {
+//         imageBox.style.webkitTransition="all .2s";
+//         imageBox.style.transition="all .2s";
+//     };
+//     var removeTransition=function()
+//     {
+//           imageBox.style.webkitTransition="none";
+//           imageBox.style.transition="none";
+//     };
+//     var setTranslateX=function(translateX)
+//     {
+//         imageBox.style.webkitTransform="translateX("+translateX+"px)";
+//         imageBox.style.transform="translateX("+translateX+"px)";
+//     };
+//     var index=1;
+//     var timer=setInterval(function()
+//     {
+//         index ++;
+//         addTransition();
+//         setTranslateX(-index*w);
+//     },4000);
+//     itcast.transitionEnd(imageBox,function()
+//     {
+//         console.log('transitionEnd');
+//         if(index>=9)
+//         {
+//             index=1;
+//             removeTransition();
+//             setTranslateX(-index*w);
+//         }
+//         else if(index<=0)
+//         {
+//             index=8;
+//             removeTransition();
+//             setTranslateX(-index*w);
+//         }
+//         setPpint();
+//     });
+//     var setPoint=function()
+//     {
+//         for(var i=0; i<points.length; i++)
+//         {
+//             points[i].className=" ";
+//         }
+//         points[i].className="now";
+//     }
+//     var startX=0;
+//     var moveX=0;
+//     var distanceX=0;
+//     var isMove=false;
 
-    imageBox.addEventListener('touchstart',function(e)
-    {
-        clearInterval(timer);
-        startX=e.touches[0].clientX;
-    });
-    imageBox.addEventListener('touchmove',function(e)
-    {
-        isMove=true;
-        moveX=e.touches[0].clientX;
-        distanceX=moveX-startX;
-        console,log(distanceX);
-        var currX=-index*w+distanceX;
-        removeTransition();
-        setTranslateX(currX);
-    });
-    imageBox.addEventListener('touchend',function(e)
-    {
-        if(isMove && (Math.abs(distanceX)>w/3))
-        {
-            if(distanceX>0)
-            {
-                index --;
-            }
-            else
-            {
-                index ++;
-            }
-            addTransition();
-            setTranslateX(-index*w);
-        }
-        else
-        {
-            addTransition();
-            setTranslateX(-index*w);
-        }
-        startX=0;
-        moveX=0;
-        distanceX=0;
-        isMove=false;
-        clearInterval(timer);
-        timer=setInterval(function()
-        {
-            index ++;
-            addTransition();
-            setTranslateX(-index*w);
-        },4000)
-    });
- }
-}
+//     imageBox.addEventListener('touchstart',function(e)
+//     {
+//         clearInterval(timer);
+//         startX=e.touches[0].clientX;
+//     });
+//     imageBox.addEventListener('touchmove',function(e)
+//     {
+//         isMove=true;
+//         moveX=e.touches[0].clientX;
+//         distanceX=moveX-startX;
+//         console,log(distanceX);
+//         var currX=-index*w+distanceX;
+//         removeTransition();
+//         setTranslateX(currX);
+//     });
+//     imageBox.addEventListener('touchend',function(e)
+//     {
+//         if(isMove && (Math.abs(distanceX)>w/3))
+//         {
+//             if(distanceX>0)
+//             {
+//                 index --;
+//             }
+//             else
+//             {
+//                 index ++;
+//             }
+//             addTransition();
+//             setTranslateX(-index*w);
+//         }
+//         else
+//         {
+//             addTransition();
+//             setTranslateX(-index*w);
+//         }
+//         startX=0;
+//         moveX=0;
+//         distanceX=0;
+//         isMove=false;
+//         clearInterval(timer);
+//         timer=setInterval(function()
+//         {
+//             index ++;
+//             addTransition();
+//             setTranslateX(-index*w);
+//         },4000)
+//     });
+//  }
+// }
 
 
 
@@ -178,4 +178,41 @@ window.onload=function()
         },1000)
     }
 }
- 
+var imagesA=document.getElementById("images").children;
+
+console.log(imagesA);
+
+
+//----------利用计时器间隔1s,显示1张图像，其余图像隐藏。
+var currentNo=0;
+function changImg(){
+    //排他原理，去掉同类，突出自己。
+    for(var i=0; i<imagesA.length;i++){
+        imagesA[i].className="hiddenImg";
+        console.log(imagesA[i]);
+    }
+     //再突出自己
+    imagesA[currentNo].className="displayImg";
+    //换个元素，为下一次计时器调用做准备
+    if(currentNo<7){currentNo++;}
+    else{
+        currentNo=0;
+    }
+    // console.log(currentNo);
+}
+
+var timer=window.setInterval(changImg,1000);
+
+//为按钮添加鼠标移入移出暂停事件
+function stopChange(){
+    window.clearInterval(timer);
+}
+function starChange(){
+     timer=window.setInterval(changImg,1000)
+}
+
+var imagesdiv=document.getElementById("images");
+console.log(imagesdiv);
+imagesdiv.addEventListener('mouseover',stopChange);
+imagesdiv.addEventListener('mouseout',starChange);
+

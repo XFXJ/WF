@@ -184,65 +184,42 @@ position: relative;
     left: 85px;
 }
 /* 轮播图 */
-.hm_banner
+
+.displayImg
 {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+    /* display:block; */
+    opacity: 1;
 }
-.hm_banner>ul:first-child
+.hiddenImg
 {
-    width: 100%;
-    -webkit-transform: translateX(-10%);
-    transform: translateX(-10%);
+    /* display: none; */
+    opacity: 0;
 }
-.hm_banner>ul:first-child>li{
-    width: 10%;
-    float: left;
-}
-.hm_banner>ul:first-child>li>a
+#images
 {
-    width: 100%;
-    display: block;
+   
+position: absolute;
+top:0;
+
 }
-/* .hm_banner>ul:first-child>li>a>img 
-/* { */
-    /* width: 100%; */
-    /* font-size: 0; */
-    /* display: block; */
-/* } */
-.hm_banner>ul:last-child
+#images>a
 {
-    width: 118px;
-    height: 6px;
-    position: absolute;
-    bottom: 6px;
-    left: 50%;
-    margin-left: -59px;
+    
+transform:  opacity 1s linear;
+display: block;
+position: absolute;
+top:0;
+left: 0;
 }
-.hm_banner>ul:last-child>li
-{
-    width: 6px;
-    height: 6px;
-    float: left;
-    border-radius: 3px;
-    border: 1px solid #fff;
-    margin-left: 10px;
-}
-.hm_banner>ul:last-child>li.now
-{
-    background: #fff;
-}
-.hm_banner>ul:last-child>li:nth-child(1)
-{
-    margin-left: 0;
-}
+
 /* 导航栏 */
 .hm_nav
 {
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #e0e0e0;
+    position: absolute;
+    top:300px;
 }
 .hm_nav >ul
 {
@@ -276,6 +253,8 @@ position: relative;
 .product
 {
     padding: 0 5px;
+    position: absolute;
+    top:450px;
 }
 .product>.product_box
 {
