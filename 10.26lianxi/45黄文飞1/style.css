@@ -119,8 +119,78 @@ position: relative;
 #images>a
 {
 transform:  opacity 1s linear;
-display: block;
+/* display: block; */
 position: absolute;
 top:0;
 left: 0;
+}
+img
+{
+    transform: opacity 1s linear;
+    opacity: 1;
+}
+.slider
+{
+    width: 1500px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.slider img 
+{ 
+ display: block; 
+} 
+.btn
+{
+position: absolute;
+top: 50%;
+width: 60px;
+height: 30px;
+background-color: #000;
+opacity: 0.3;
+color: #fff;
+cursor: pointer;
+text-align: center;
+line-height: 30px;
+background-position: center;
+}
+.rightButton
+{
+    right: 20px;
+}
+.leftButton
+{
+left: 20px;
+}
+.txtbox 
+{
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 5;
+}
+.txtbox li
+{
+    width: 12.5%;
+    background-color: rgb(0,0,0,0.5);
+    margin-right: 2px;
+    color: #fff;
+    text-align: center;
+}
+.txtbox:hover
+{
+    height: 40px;
+}
+
+.txtbox li:hover
+{
+background-color: rgba(252,164,2 ,0.829 )
+}
+.txtbox:last-child
+{
+    margin: 0;
 }
