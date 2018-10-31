@@ -5,7 +5,8 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form
 }
 ul{
     list-style: none;
-}
+ }
+/*  
 .ShowContainer {
 	max-width: 1500px;
     min-width: 1000px;
@@ -56,13 +57,13 @@ ul{
     width: 100%;
     overflow: hidden;
     transition: height 0.25s linear;
-}
+} */
 
 .shorten{
     bottom: 0px;
     height: 5px;
-}
-
+} 
+/* 
 .heighten{
     bottom: 0px;
     height: 50px;
@@ -101,7 +102,7 @@ ul{
     text-align: center;
     font-weight: bold;
     overflow: hidden;
-}
+} */
 .displayImg
 {
     /* display:block; */
@@ -173,14 +174,14 @@ left: 20px;
     display: flex;
     z-index: 5;
 }
-.txtbox li
+/* .txtbox li
 {
     width: 12.5%;
     background-color: rgb(0,0,0,0.5);
     margin-right: 2px;
     color: #fff;
     text-align: center;
-}
+} */
 .txtbox:hover
 {
     height: 40px;
@@ -191,6 +192,26 @@ left: 20px;
 background-color: rgba(252,164,2 ,0.829 )
 }
 .txtbox:last-child
+{
+    margin: 0;
+}
+.normalColor
+{
+    background-color: rgb(0,0,0,0.5);
+}
+.txtItem
+{
+    width: 12.5%;
+    margin-right: 2px;
+    color: #fff;
+    text-align: center;
+}
+
+.txtItem li:hover,.heighlightColor
+{
+    background-color: rgba(252,164,2 ,0.829 )
+}
+.txtItem:last-child
 {
     margin: 0;
 }
