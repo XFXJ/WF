@@ -178,41 +178,97 @@ window.onload=function()
         },1000)
     }
 }
-var imagesA=document.getElementById("images").children;
+var imagesA = document.getElementById("images").children;
+var txtList = document.querySelector(".txtbox").children;
 
-console.log(imagesA);
+var currentNo = 0;
+const nodeLength = 8;
 
-
-//----------利用计时器间隔1s,显示1张图像，其余图像隐藏。
-var currentNo=0;
-function changImg(){
-    //排他原理，去掉同类，突出自己。
-    for(var i=0; i<imagesA.length;i++){
-        imagesA[i].className="hiddenImg";
-        console.log(imagesA[i]);
+function changeImg() 
+{
+    for (var i = 0; i < nodeLength; i++) 
+    {
+        imagesA[i].className = "hiddenImg";
+        txtList[i].className = "txtItem normalColor";
     }
-     //再突出自己
-    imagesA[currentNo].className="displayImg";
-    //换个元素，为下一次计时器调用做准备
-    if(currentNo<7){currentNo++;}
-    else{
-        currentNo=0;
-    }
-    // console.log(currentNo);
+    
+    imagesA[currentNo].className = "displayImg";
+    txtList[currentNo].className = "txtItem heighlightColor";
+   
 }
 
-var timer=window.setInterval(changImg,1000);
+function leftImg()
+{     
+    if (currentNo > 0) 
+    { 
+        currentNo--; 
+    }
+    else {
+        currentNo = 7;
+    } 
+}
 
-//为按钮添加鼠标移入移出暂停事件
-function stopChange(){
+function rightImg() 
+{
+    if (currentNo < 7) 
+    { 
+        currentNo++; 
+    }
+    else 
+    {
+        currentNo = 0;
+    }  
+}
+
+
+var timer = window.setInterval(rightImgGo, 1000);
+
+function stopChange() 
+{
     window.clearInterval(timer);
-}
-function starChange(){
-     timer=window.setInterval(changImg,1000)
+ 
 }
 
-var imagesdiv=document.getElementById("images");
-console.log(imagesdiv);
-imagesdiv.addEventListener('mouseover',stopChange);
-imagesdiv.addEventListener('mouseout',starChange);
+function startChange() 
+{
+    timer = window.setInterval(rightImgGo, 1000);
+}
+
+
+var sliderX = document.querySelector(".slider");
+
+sliderX.addEventListener('mouseover', stopChange);
+sliderX.addEventListener('mouseout', startChange);
+
+
+for (var i = 0; i < txtList.length; i++)
+ {
+    txtList[i].addEventListener('mouseover', gotoImg);
+    txtList[i].no = i;
+}
+
+
+function gotoImg()
+ {
+    currentNo = this.no;
+    changeImg();
+}
+
+var leftButton = document.querySelector('.leftButton');
+var rightButton = document.querySelector('.rightButton');
+
+leftButton.addEventListener('click', leftImgGo);
+rightButton.addEventListener('click', rightImgGo);
+
+function leftImgGo()
+{
+    leftImg();
+    changeImg();
+}
+
+function rightImgGo()
+{
+    rightImg();
+    changeImg();
+}
 
