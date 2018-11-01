@@ -13,23 +13,9 @@
 
 // img4.style.display="block";
 
-//初始化
-
-
-
-
-// ------------初始化控制变量-----
-
-
-
-
-
-//-------为各元素增加事件---------
-
-
 
 //获取一组带图的超链接
-//-----------获取相关元素---------
+
 var imagesA=document.getElementById("images").children;
 // var txtList=document.querySelectorAll(".txtItem");
 var txtList=document.querySelector('.txtbox').children;
@@ -47,10 +33,10 @@ var txtList=document.querySelector('.txtbox').children;
 // imagesb[4].className="displayImg";
 
 //利用计时器间隔1秒显示一张图片，其他隐藏
-// ------------初始化控制变量-----
+
 var currentNo=0;
 const nodeLength=8;
-// ----------构建功能函数---------
+
 function changeImg()
 {//排他原理，先去掉同类
     var nodeLength=txtList.length
@@ -64,7 +50,7 @@ function changeImg()
     //     item.className="hiddenImg"
     // }
 //再突出自己
-//-------为各元素增加事件---------
+
     imagesA[currentNo].className="displayImg";
     txtList[currentNo].className="txtItem heighlightColor";
 //换个元素，为下一次计时器调用做准备
@@ -105,7 +91,6 @@ function rightImg()
   
 }
 
-//----------启动计时器-------------
 
 var timer=window.setInterval(rightImgGo,1000);
 
@@ -157,3 +142,21 @@ function rightImgGo()
     leftImg();
     changeImg();
 }
+//初始化
+// sliderDiv.addEventListener('mouseover', stopChange);
+// sliderDiv.addEventListener('mouseover', function () {    window.clearInterval(timer);  });
+sliderDiv.addEventListener('mouseover', ()=>{clearInterval(timer);});
+//-----------获取相关元素---------
+
+
+// ------------初始化控制变量-----
+
+
+// ----------构建功能函数---------
+
+//-------为各元素增加事件---------
+
+//-------为各元素增加事件---------
+
+
+//----------启动计时器-------------
