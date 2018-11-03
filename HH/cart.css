@@ -9,7 +9,7 @@ body
 }
 .hm_safeTip
 {
-    /* height: 34px; */
+    height: 34px;
     border-bottom: 1px solid #e0e0e0;
     line-height: 33px;
     background: #fff;
@@ -29,7 +29,7 @@ body
     position: absolute;
     top: 8px;
     left: 0;
-    background: url(http://img1.imgtn.bdimg.com/it/u=2149772158,2732659903&fm=26&gp=0.jpg)no-repeat;
+    background: url(tp/12.png)no-repeat;
     background-size: 18px 18px;
     width: 18px;
     height: 18px;
@@ -118,6 +118,7 @@ body
     line-height: 15px;
     display: block;
     overflow: hidden;
+    text-decoration:none;
 }
 .hm_product_right .product_info .price
 {
@@ -157,7 +158,7 @@ body
 }
 .option .f_left .up
 {
-    background: url(http://img1.imgtn.bdimg.com/it/u=2149772158,2732659903&fm=26&gp=0.jpg)no-repeat;
+    background: url(tp/15.png)no-repeat;
     background-size: 20px 20px;
     width: 20px;
     height: 5px;
@@ -166,7 +167,7 @@ body
 }
 .option .f_left .down
 {
-    background: url(http://img1.imgtn.bdimg.com/it/u=2149772158,2732659903&fm=26&gp=0.jpg)no-repeat;
+    background: url(tp/15.png)no-repeat;
     background-size: 18px 18px;
     width: 18px;
     height: 18px;
@@ -179,7 +180,7 @@ body
     height: 34px;
     width: 40px;
     padding: 7px 10px; 
-    background: url(http://img1.imgtn.bdimg.com/it/u=2149772158,2732659903&fm=26&gp=0.jpg)no-repeat;
+    background: url(tp/11.png)no-repeat;
     background-size: 50px 100px;
     background-origin: content-box;
     background-clip: content-box;
@@ -187,7 +188,7 @@ body
 }
 .hm_check_box[checked]
 {
-    background-position: 125px 0;
+    background-position: -25px 0;
 } 
 /* 弹出框 */
 .hm_win
