@@ -1,7 +1,20 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    /* 清除移动端默认的点击高度效果 */
+    -webkit-tap-highlight-color: transparent;
+    /* 设置所有的都是以边框开始计算宽度百分比 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body
 {
     background: #f5f5f5;
     min-width: 300px;
+    background-color: mediumvioletred;
 }
 .hm_topBar
 {
@@ -74,6 +87,11 @@ body
     float:right;
     color: #d8505c;
     font-size: 12px;
+}
+h3
+{
+    text-align: center;
+    font-weight: normal;
 }
 .hm_shop>.hm_shop_con
 {
