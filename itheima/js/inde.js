@@ -28,7 +28,7 @@ function bannner()
     };
     var render=function()
     {
-        var width=$(width).width();
+        var width=$(window).width();
         var isMobile=false;
         if(width<=768)
         {
@@ -45,7 +45,7 @@ function bannner()
             $('.carousel-inner').html(htmlImage);
         });
     };
-    $(width).on('resize',function()
+    $(window).on('resize',function()
     {
         render();
     }).trigger('resize');
@@ -76,6 +76,10 @@ function bannner()
                 $('.carousel').carousel('next');
             }
         }
+        var startX=0;
+        var moveX=0;
+        var distanceX=0;
+        var isMove=false;
 
     });
 }
