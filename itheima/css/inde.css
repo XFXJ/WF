@@ -27,11 +27,12 @@ a:hover
 }
 .heima_icon_phone::before
 {
-    content: "\e908";
+    width: 10px;
+    content: url(../images/1.png);
 }
 .heima_icon_tel::before
 {
-    content: "\e909";
+    content: url(../images/12.png);
 }
 /* 顶部通栏 */
 .heima_topBar
@@ -243,4 +244,90 @@ fieldset[disabled] .heima_nav .btn-link:focus
 {
     width: 100%;
     display: block;
+}
+/* 信息 */
+.heima_info
+{
+    padding: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.heima_info>.container
+{
+    width: 910px;
+}
+.heima_info .heima_icon
+{
+    font-size: 30px;
+}
+.heima_info .col-md-4
+{
+    padding: 10px;
+}
+.heima_info a:hover
+{
+    color: #E92322;
+}
+/* 图标 */
+.heima_icon_E903::before
+{
+    content: url(../images/4.png);
+}
+.heima_icon_E907::before
+{
+    content:url(../images/9.png);
+}
+.heima_icon_E901::before
+{
+    content: url(../images/5.png);
+}
+.heima_icon_E900::before
+{
+    content: url(../images/6.png);
+}
+.heima_icon_E904::before
+{
+    content: url(../images/7.png);
+}
+.heima_icon_E902::before
+{
+    content: url(../images/8.png);
+}
+/* 预约 */
+.heima_book
+{
+    padding: 25px 0;
+    border-bottom: 1px solid #ccc;
+}
+.heima_book>.container
+{
+    width: 910px;
+}
+@media screen and (max-width:768px)
+{
+    .heima_book>.container
+{
+    width: 100%;
+}
+}
+.heima_book .heima_icon
+{
+    font-size: 24px;
+}
+.heima_book a:hover
+{
+    color: #E92322;
+}
+.heima_book .book_link
+{
+    color: #E92322;
+    border-bottom: 1px solid #E92322;
+}
+/* 图标 */
+.heima_icon_E906::before
+{
+    content: url(../images/10.png);
+}
+.heima_icon_E905::before
+{
+    content: url(../images/11.png);
 }
