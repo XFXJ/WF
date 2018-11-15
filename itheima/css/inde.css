@@ -550,3 +550,261 @@ fieldset[disabled] .heima_nav .btn-link:focus
     color: red;
     border: 1px solid red;
 }
+/* 新闻 */
+.heima_news
+{
+    padding: 20px 0;
+}
+.heima_news .news_title
+{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+}
+.heima_news .news_title::after
+{
+    content:url();
+    position: absolute;
+    bottom: -3px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.heima_news .news_line
+{
+    position: absolute;
+    top: 0;
+    left: 45px;
+    height: 100%;
+    border-left: 1px solid #ccc;
+    width: 1px;
+}
+/* 新闻tab */
+.nav-tabs-news
+{
+    border: none;
+}
+.nav-tabs-news>li
+{
+    float: left;
+    margin-bottom: -1px;
+}
+.nav-tabs-news>li>a
+{
+    margin-right: 0;
+    border: none;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background: #ccc;
+    margin-bottom: 60px;
+    padding: 0;
+    text-align: center;
+}
+/* 针对小屏幕设备 */
+@media screen and (max-width:992px) and (min-width:768px)
+{
+    .nav-tabs-news>li>a
+    {
+      margin: 20px 40px;
+    }
+}
+@media screen and (max-width:768px) 
+{
+    .nav-tabs-news>li
+    {
+        width: 25%;
+    }
+    .nav-tabs-news>li>a
+    {
+      margin: 30px 0;
+    }
+}
+@media screen and (max-width:414px) 
+{
+    .nav-tabs-news .tab-pane>ul
+    {
+        margin-left: -35px;
+        font-size: 5px;
+    }
+    .nav-tabs-news .tab-pane>ul>li
+    {
+        padding: 0px;
+    }
+}
+.nav-tabs-news>li:last-child>a
+{
+    margin-bottom: 0;
+}
+.nav-tabs-news>li>a.heima_icon 
+{
+    font-size: 30px;
+    color: #fff;
+}
+.nav-tabs-news>li>a:hover
+{
+    border: none;
+    background: #E92322;
+}
+.nav-tabs-news>li .active>a,
+.nav-tabs-news>li .active>a:hover,
+.nav-tabs-news>li .active>a:focus
+{
+    color: #555;
+    cursor: default;
+    background-color: #E92322;
+    border: none;
+    border-bottom-color: transparent;
+}
+.nav-tabs-news .nav-justified
+{
+    width: 100%;
+    border-bottom: 0;
+}
+.nav-tabs-news .nav-justified>li
+{
+float:none;
+}
+.nav-tabs-news .nav-justified>li>a
+{
+    margin-bottom: 5px;
+    text-align: center;
+}
+.nav-tabs-news .nav-justified>.dropdown .dropdown-menu
+{
+    top: auto;
+    left: auto;
+}
+@media  (min-width:768px) 
+{
+    .nav-tabs-news .nav-justified>li
+    {
+        display: table-cell;
+        width: 1%;
+    }
+    .nav-tabs-news .nav-justified>li>a
+    {
+        margin-bottom: 0;
+    }
+}
+.nav-tabs-news .nav-justified>li>a
+{
+    margin-right: 0;
+    border-radius: 4px;
+}
+.nav-tabs-news .nav-justified>.active>a,
+.nav-tabs-news .nav-justified>.active>a:hover,
+.nav-tabs-news .nav-justified>.active>a:focus
+{
+    border: 1px solid #ddd;
+}
+@media  (min-width:768px) 
+{
+    .nav-tabs-news .nav-justified>li>a
+    {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .nav-tabs-news .nav-justified>.active>a,
+    .nav-tabs-news .nav-justified>.active>a:hover,
+    .nav-tabs-news .nav-justified>.active>a:focus
+    {
+       border-bottom-color: #fff;
+    }
+}
+.nav-tabs-news .tab-pane>ul
+{
+    list-style: none;
+}
+.nav-tabs-news .tab-pane>ul>li
+{
+    padding: 10px;
+}
+/* 图 */
+.heima_icon_new01::before
+{
+    content: url(../images/14.png);
+}
+.heima_icon_new02::before
+{
+    content: url(../images/15.png);
+}
+.heima_icon_new03::before
+{
+    content: url(../images/16.png);
+}
+.heima_icon_new04::before
+{
+    content: url(../images/17.png);
+}
+/* 合作伙伴 */
+.heima_partner
+{
+    background: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+}
+.heima_partner ul
+{
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+}
+.heima_partner ul li
+{
+    float: left;
+    font-size: 60px;
+    margin-left: 30px;
+}
+.heima_partner ul li:first-child
+{
+    margin-left: 0;
+}
+/* 图 */
+.heima_icon_partner01::before
+{
+    content: url(../images/18.png);
+}
+.heima_icon_partner02::before
+{
+    content: url(../images/19.png);
+}
+.heima_icon_partner03::before
+{
+    content: url(../images/20.png);
+}
+.heima_icon_partner04::before
+{
+    content: url(../images/21.png);
+}
+.heima_icon_partner05::before
+{
+    content: url(../images/22.png);
+}
+.heima_icon_partner06::before
+{
+    content: url(../images/23.png);
+}
+.heima_icon_partner07::before
+{
+    content: url(../images/24.png);
+}
+.heima_icon_partner08::before
+{
+    content: url(../images/25.png);
+}
+.heima_icon_partner09::before
+{
+    content: url(../images/26.png);
+}
+li
+{
+    list-style:none;
+}
