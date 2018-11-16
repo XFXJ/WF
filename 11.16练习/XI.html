@@ -1,0 +1,143 @@
+<!-- 商品类 -->
+<script>
+    class Gooos {
+        constructor(id, titl, price, imgpaht) {
+            // 商品类成员
+            this.id = id;
+            this.titl = titl;
+            this.price = price;
+            this.imgpaht = imgpaht;
+        }
+    }
+
+    // 订单类-1
+    class Order 
+    {
+        constructor(gooos,qty) {
+            // 商品类成员
+            this.id =gooos.id;
+            this.titl =gooos.titl;
+            this.price =gooos.price;
+            this.imgpaht = gooos.imgpaht;
+            this.qty=qty;
+        }
+    }
+   
+
+// 购物车数据类--确定格式
+    class CartData {
+        constructor() {
+            this.orderList = new Array();
+            this.units = 0;
+            this.totaQty = 0;
+            this.totalAmount = 0;
+        }
+    }
+
+//函数定义--将某个订单order，加入购物车
+    function addtoCart(order)
+{
+   var flang=true;//代表当前状态是新商品
+   for(const i in myCart.orderList)
+   {
+       if(order.id == myCart.orderList[i].id)
+       {
+        flang=false;//修改状态，是老商品
+        //    新增对于qty
+           myCart.orderList[i].qty+=order.qty;
+           break;
+       }
+       if(flang)
+       {
+        //    order是购物车中的新商品，为样本数++
+        myCart.orderList.push(order);
+           myCart.units++;
+       }
+   }
+   myCart.totaQty +=order.qty;
+    myCart.totalAmount +=order.price*order.qty;
+
+}
+
+   // 商品对象/实例
+   var gooos1 = new Gooos('1', '大炮', '99', '');
+    var gooos2 = new Gooos('2', '飞机', '99', '');
+
+
+// 创建订单对象
+    var order=new Order(gooos1,5);
+
+localStorage.setItem('s1',JSON.stringify(gooos1));
+var pfroms=JSON.parse( localStorage.getItem('s1'));
+console.log('pfroms');
+
+    // 实例化购物车数据--订单1进购物车myCart
+    var myCart = new CartData();
+    myCart.orderList.push(order);
+    myCart.units=1;
+    myCart.totaQty=order.qty;
+    myCart.totalAmount=order.price*order.qty;
+    // console.log(myCart);
+
+order=new Order(gooos2,3);
+addtoCart(order);//调用加入购物车函数
+// console.log(myCart);
+
+
+order=new Order(gooos2,1);
+addtoCart(order);//调用加入购物车函数
+console.log(myCart);
+
+    
+    // 练习
+    var x=10;
+    var y=20;
+
+    localStorage.setItem('kx',x);
+    var xfrons=localStorage.getItem('kx');
+    console.log(xfrons+y);
+
+
+</script>
+
+sc
+
+<!-- <script>
+
+    class Shopping {
+        constructor(pid, name, imgpaht, price, goods, number) {
+            this.pid = pid;
+            this.name = name;
+            this.imgpaht = imgpaht;
+            this.price = price;
+            this.goods = goods;
+            this.number = number;
+        }
+    }
+    var shopping1 = new Shopping('1,', 'nona2,', '卫星,', '2000元，', '华为系列，', '1');
+    var shopping2 = new Shopping('2,', 'nona2,', '卫星,', '2000元，', '华为系列，', '1');
+
+    console.log(shopping1);
+    console.log(shopping2);
+
+    console.log(shopping1.pid);
+    console.log(shopping2.pid);
+
+    console.log(shopping1['pid']);
+    console.log(shopping2['pid']);
+
+
+
+    class Orde {
+        constructor(shopping, qty) {
+            this.shopping = shopping;
+            this.qty = qty;
+        }
+    }
+    var orde1 = new Orde(shopping1, 5)
+
+    console.log(orde1);
+    console.log(orde1.shopping);
+    console.log(orde1.shopping.price);
+
+</script> -->
