@@ -95,12 +95,14 @@ a:hover
     border: none;
     border-bottom: 1px solid #ccc;
     margin-bottom: 0;
+    
 }
 .heima_nav .navbar-brand
 {
     color: #777;
     height: 80px;
     line-height: 50px;
+    
 }
 .heima_nav .navbar-brand:hover,.heima_nav .navbar-brand:focus
 {
