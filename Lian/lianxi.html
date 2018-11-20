@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="shoppingcart.js"></script>
+    <script>
+        // 商品
+        var w = new Gooos("1", "青蛙", "01.jpg", "59.9");
+        // 订单
+        var order = new Order(w, 2, true);
+        // var title = order.gooos.title;
+
+        var cartData = new CartData();
+        cartData.orderList.push(order);
+        cartData.totaQty = order.qty;
+        cartData.totalAmount = order.price * order.qty;
+        cartData.units = 1;
+
+        // 创建购物车操作类对象
+        var cart=new ShoppingCart();
+
+        cart.setDataToLocalSatorge(cartData);
+        console.log( cart.getDataFromLocalSatorge());
+    </script>
+</body>
+
+</html>
