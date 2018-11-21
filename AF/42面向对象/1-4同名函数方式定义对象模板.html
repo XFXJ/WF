@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS对象定义</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //用函数定义对象模板
+    function Car(color, doors, mpg) {
+        this.color = color;
+        this.doors = doors;
+        this.mpg = mpg;
+        this.showColor = function () {
+            alert(this.color);
+        };
+    }
+
+    // 基于构造函数定义新汽车对象实例
+    var oCar1 = createCar("red", 4, 23);
+    var oCar2 = createCar("blue", 3, 25);
+
+    oCar1.showColor();		//输出 "red"
+    oCar2.showColor();		//输出 "blue"
+
+
+</script>
