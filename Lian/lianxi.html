@@ -9,25 +9,37 @@
 </head>
 
 <body>
-    <script src="shoppingcart.js"></script>
+    <script src="js/shoppingcart.js"></script>
     <script>
-        // 商品
-        var w = new Gooos("1", "青蛙", "01.jpg", "59.9");
-        // 订单
-        var order = new Order(w, 2, true);
-        // var title = order.gooos.title;
+        // 创建一个购物车
+        var cart = new ShoppingCart();
+        cart.clearCart();
+        // 创建一个商品
+        var product = new Product("1", "青蛙", "01.jpg", 59.9)
+        // 创建一个订单
+        var order = new Order(product, 3, true);
+        // 将订单order置入购物车
+        cart.addToCart(order);
+        // 创建第二个商品
+        product = new Product("2", "蛙", "02.jpg", 99.9)
+        // 创建第二个订单
+        order = new Order(product, 6, true);
+        // 将新商品加入购物车
+        cart.addToCart(order);
+         // 创建第三个商品
+         product = new Product("3", "牛蛙", "02.jpg", 999.9)
+        // 创建第三个订单
+        order = new Order(product,8, true);
+        // 将新商品加入购物车
+        cart.addToCart(order);
 
-        var cartData = new CartData();
-        cartData.orderList.push(order);
-        cartData.totaQty = order.qty;
-        cartData.totalAmount = order.price * order.qty;
-        cartData.units = 1;
+        console.log(cart.getSelectedQty());
+        console.log(cart.getSelectedAmount());
 
-        // 创建购物车操作类对象
-        var cart=new ShoppingCart();
+        cart.setItemSelectStatus('3', true);
+        console.log(cart.getSelectedQty());
+        console.log(cart.getSelectedAmount());
 
-        cart.setDataToLocalSatorge(cartData);
-        console.log( cart.getDataFromLocalSatorge());
     </script>
 </body>
 

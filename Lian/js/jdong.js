@@ -35,9 +35,9 @@ function decreaseValue(e){
 }
 
 function addToCart(e){
-  var qtyObj=  e.target.previousElementSibling.previousElementSibling;
-  var qty=parseInt(qtyObj.innerText);
-  var total=parseInt(totalQty.innerText);
-  total+=qty;
-  totalQty.innerText=total;  
+    var qtyObj=  e.target.previousElementSibling.previousElementSibling;
+    var qty=parseInt(qtyObj.innerText);
+    var total=parseInt(totalQty.innerText);
+    total+=qty;
+    totalQty.innerText=total;  
 }
