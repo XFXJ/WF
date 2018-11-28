@@ -15,28 +15,34 @@
         var cart = new ShoppingCart();
         cart.clearCart();
         // 创建一个商品
-        var product = new Product("1", "青蛙", "01.jpg", 59.9)
+        var product = new Product("01", "青蛙", "01.png", 59.9)
         // 创建一个订单
         var order = new Order(product, 3, true);
         // 将订单order置入购物车
         cart.addToCart(order);
         // 创建第二个商品
-        product = new Product("2", "蛙", "02.jpg", 99.9)
+        product = new Product("02", "蛙", "02.png", 99.9)
         // 创建第二个订单
         order = new Order(product, 6, true);
         // 将新商品加入购物车
         cart.addToCart(order);
          // 创建第三个商品
-         product = new Product("3", "牛蛙", "02.jpg", 999.9)
+         product = new Product("03", "牛蛙", "03.png", 999.9)
         // 创建第三个订单
         order = new Order(product,8, true);
+        // 将新商品加入购物车
+        cart.addToCart(order);
+         // 创建第四个商品
+         product = new Product("04", "七彩蛙", "04.png", 9999.9)
+        // 创建第四个订单
+        order = new Order(product,2, true);
         // 将新商品加入购物车
         cart.addToCart(order);
 
         console.log(cart.getSelectedQty());
         console.log(cart.getSelectedAmount());
 
-        cart.setItemSelectStatus('3', true);
+        cart.setItemSelectStatus('03', true);
         console.log(cart.getSelectedQty());
         console.log(cart.getSelectedAmount());
 

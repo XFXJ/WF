@@ -7,13 +7,13 @@ localStorage.removeItem("key");
 // 产品类
 class Product {
     // 产品类成员
-    constructor(id, titl, imgpaht, price) {
+    constructor(id, title, imgSrc, price) {
         // 产品id
         this.id = id;
         // 产品名称
-        this.titl = titl;
+        this.title = title;
         // 产品图片地址
-        this.imgpaht = imgpaht;
+        this.imgSrc = imgSrc;
         // 产品价格
         this.price = price;
     }
@@ -26,9 +26,9 @@ class Order {
         // 产品id
         this.id = product.id;
         // 产品名称
-        this.titl = product.titl;
+        this.title = product.title;
         // 产品图片地址
-        this.imgpaht = product.imgpaht;
+        this.imgSrc = product.imgSrc;
         // 产品价格
         this.price = product.price;
         // 产品数量
@@ -150,7 +150,7 @@ class ShoppingCart {
             // 找到对应id
             order.selectStatus = selectStatus;
             // 写入本地存储
-            this.setDataToLocalStorage(cartData);
+            this.setDataToLocalSatorge(cartData);
         }
     }
        // 查找指定id的订单
@@ -188,7 +188,7 @@ class ShoppingCart {
             // 变更总商品件数
             cartData.units--;
             //数据回写购物车
-            this.setDataToLocalStorage(cartData);
+            this.setDataToLocalSatorge(cartData);
         }
     }
 }

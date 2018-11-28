@@ -1,5 +1,5 @@
 var totalQty=document.getElementsByName('totalQty')[0];
-console.log(totalQty);
+// console.log(totalQty);
 var increaseJa=document.getElementsByName('increase');
 
 console.log(increaseJa);
