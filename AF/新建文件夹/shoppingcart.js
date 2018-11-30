@@ -1,67 +1,53 @@
-// localStorage.setItem("key", "value");
-// localStorage.getItem("key");
-// localStorage.removeItem("key");
+// localStorage.setItem("key","value");//存储变量名为key，值为value的变量 
+// localStorage.key = "value"//存储变量名为key，值为value的变量 
+// localStorage.getItem("key");//获取存储的变量key的值
+// localStorage.key;//获取存储的变量key的值 
+// localStorage.removeItem("key")//删除变量名为key的存储变量
 
-
-
-// 产品类
+// 商品类
 class Product {
-    // 产品类成员
     constructor(id, title, imgSrc, price) {
-        // 产品id
         this.id = id;
-        // 产品名称
         this.title = title;
-        // 产品图片地址
         this.imgSrc = imgSrc;
-        // 产品价格
         this.price = price;
     }
 }
 
-// 订单类
+
+//订单类
 class Order {
-    // 商品类成员
     constructor(product, qty, selectStatus) {
-        // 产品id
         this.id = product.id;
-        // 产品名称
         this.title = product.title;
-        // 产品图片地址
         this.imgSrc = product.imgSrc;
-        // 产品价格
         this.price = product.price;
-        // 产品数量
         this.qty = qty;
-        // 产品选择状态
         this.selectStatus = selectStatus;
     }
-}
+};
 
-
-// 购物车数据类--确定格式
+// -----------------
+// 购物车数据类,用于记录购物车数据。
+// 包括订单列表、总计商品数量、总计商品样本数、总价格
+// 订单列表项包括：某类商品、商品数量小计
+// 商品包括：商品id、图片、名称、单价
 class CartData {
     constructor() {
         this.orderList = new Array();
-        this.totaQty = 0;
+        this.totalQty = 0;
         this.totalAmount = 0;
         this.units = 0;
     }
 }
 
-// 购物车操作类
+//购物车操作类
 class ShoppingCart {
 
-    // 将购物车数据写入本地存储中
-    setDataToLocalSatorge(cartData) {
-
-        // var cartdata =JSON.stringify(cartData);
-        // 清除原有存储写入新列表
+    // 清空购物车（移除本地存储购物车项）
+    clearCart() {
         localStorage.removeItem('lzzyCart');
-        // 写入本地存储
-        localStorage.setItem('lzzyCart', JSON.stringify(cartData));
     }
-
     // 从本地存储中获取购物车数据
     getDataFromLocalStorage() {
         let lzzyCart = localStorage.getItem('lzzyCart');
@@ -72,16 +58,23 @@ class ShoppingCart {
             return JSON.parse(lzzyCart);
         }
     }
-
+    // 将购物车数据写入本地存储中
+    setDataToLocalStorage(cartData) {
+        //清除原有存储写入新列表
+        localStorage.removeItem('lzzyCart');
+        //写入本地存储
+        localStorage.setItem('lzzyCart', JSON.stringify(cartData));
+    }
+    // 加入购物车（写入localStorage)
     addToCart(order) {
-        // 从本地存储中获取购物车数据
+        // 从本地存储中获取购物车的数据
         let cartData = this.getDataFromLocalStorage();
-        //   获取购物车json数据中的订单列表
+        // 获取购物车json数据中的订单列表            
         let orderList = cartData.orderList;
-        //   设置标志判断是否为购物车新商品，默认为是新商品
+        //设置标志位判断是否为购物车新商品，默认为是新商品
         let isNewProduct = true;
-        //   遍历订单列表，判断新加入商品是否在购物车中
-       
+        // 遍历订单列表，判断新加入商品是否在购物车中
+
         for (let i in orderList) {
             if (order.id == orderList[i].id) {
                 // 若新加入订单商品已经在购物车中，则变更订单列表中对应商品数量，且变更新商品标志位
@@ -90,40 +83,22 @@ class ShoppingCart {
                 break;
             }
         }
-        // 如果是新商品
+        //如果是新商品
         if (isNewProduct) {
-            //    order是购物车中的新商品，为样本数++
-            orderList.push(order);
-            // 总样本加一
+            // 购物车总样本+1
             cartData.units++;
+            // 导入新商品置入购物车
+            orderList.push(order);
         }
 
-        // 修改购物车总金额及商品总数
+        //修改购物车总金额及商品总数量
         cartData.totalAmount += order.qty * order.price;
         cartData.totalQty += order.qty;
 
-        // 写入localstorage
-        this.setDataToLocalSatorge(cartData);
-
+        // 写入localStorage
+        this.setDataToLocalStorage(cartData);
     }
-
-    clearCart() {
-        localStorage.removeItem('lzzyCart');
-    }
- // 获取选中商品的总数量
-    getSelectedQty() {
-        let cartData = this.getDataFromLocalStorage();
-        let orderList = cartData.orderList;
-        let selectedQty = 0;
-        for (const key in orderList) {
-            if (orderList[key].selectStatus) {
-                selectedQty += orderList[key].qty;
-            }
-        }
-        return selectedQty;
-
-    }
-        // 获取购物车中的订单列表
+    // 获取购物车中的订单列表
     getSelectedList() {
         // 从本地存储中获取购物车的数据
         let cartData = this.getDataFromLocalStorage();
@@ -138,11 +113,24 @@ class ShoppingCart {
         }
         return selectArray;
     }
-      // 获取选中商品的总价格
+    // 获取选中商品的总数量
+    getSelectedQty() {
+        let cartData = this.getDataFromLocalStorage();
+        let orderList = cartData.orderList;
+        let selectedQty = 0;
+        for (const key in orderList) {
+            if (orderList[key].selectStatus) {
+                selectedQty += orderList[key].qty;
+            }
+        }
+        return selectedQty;
+    }
+    // 获取选中商品的总价格
     getSelectedAmount() {
         let cartData = this.getDataFromLocalStorage();
         let orderList = cartData.orderList;
         let selectedAmount = 0;
+
         for (const key in orderList) {
             if (orderList[key].selectStatus) {
                 selectedAmount += orderList[key].qty * orderList[key].price;
@@ -150,8 +138,9 @@ class ShoppingCart {
         }
         return selectedAmount;
     }
+
+    // 设置购物车订单项选择状态
     setItemSelectStatus(id, selectStatus) {
-       
         // 获取购物车数据
         let cartData = this.getDataFromLocalStorage();
         let orderList = cartData.orderList;
@@ -166,11 +155,12 @@ class ShoppingCart {
             // 找到对应id
             order.selectStatus = selectStatus;
             // 写入本地存储
-            this.setDataToLocalSatorge(cartData);
+            this.setDataToLocalStorage(cartData);
         }
     }
-       // 查找指定id的订单
-       find(id, orderList) {
+
+    // 查找指定id的订单
+    find(id, orderList) {
         for (const i in orderList) {
             if (id == orderList[i].id) {
                 return orderList[i];
@@ -178,6 +168,7 @@ class ShoppingCart {
         }
         return null;
     }
+
 
     // 删除指定ID商品
     deleteItem(id) {
@@ -204,9 +195,11 @@ class ShoppingCart {
             // 变更总商品件数
             cartData.units--;
             //数据回写购物车
-            this.setDataToLocalSatorge(cartData);
+            this.setDataToLocalStorage(cartData);
         }
     }
+    
+    // 减少/增加指定商品的数量（+1或者-1）
     changeQty(id, op) {
         let cartData = this.getDataFromLocalStorage();
         let orderList = cartData.orderList;
@@ -236,8 +229,10 @@ class ShoppingCart {
             this.setDataToLocalStorage(cartData);
         }
     }
+
     getTotalUnits(){
         let cartData=this.getDataFromLocalStorage();
         return cartData.units;
     }
+
 }
