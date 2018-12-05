@@ -64,6 +64,7 @@ function initialize() {
 
 
     if (category.value === lastCategory && searchTerm.value.trim() === lastSearch) {
+     
       // 如果最后一次搜索下拉列表值和文本框搜索关键字值相等则返回函数
       return;
     } else {
@@ -74,6 +75,7 @@ function initialize() {
       if (category.value === 'All') {
         // 如果类别==全部 则将类别数组设计为所有商品调用selectProducts();
         categoryGroup = products;
+ 
 
       } else {
         // 遍历produtcs数据
