@@ -1,10 +1,10 @@
 
 // 使用json变量存储数据(后续可以从服务器端获得)
 var productsJson = {
-    "productList": [{ "id": "01", "title": "青蛙", "imgSrc": "01.jpg", "price": 59.9 },
-    { "id": "02", "title": "蛙", "imgSrc": "02.jpg", "price": 99.9 },
-    { "id": "03", "title": "牛蛙", "imgSrc": "03.jpg", "price":  999.9},
-    { "id": "04", "title": "七彩蛙", "imgSrc": "04.jpg", "price": 9999.9 }
+    "productList": [{ "id": "01", "title": "青蛙", "imgSrc": "01.png", "price": 59.9 },
+    { "id": "02", "title": "蛙", "imgSrc": "02.png", "price": 999.9 },
+    { "id": "03", "title": "牛蛙", "imgSrc": "03.png", "price": 999.9 },
+    { "id": "04", "title": "七彩蛙", "imgSrc": "04.png", "price": 999.9 }
     ]
 }
 
@@ -85,6 +85,9 @@ function init() {
 }
 
 init();
+
+
+
 
 
 

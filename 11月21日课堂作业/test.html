@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
 <body>
-    <script src="js/shoppingcart.js"></script>
+    <script src="./js/shoppingcart.js"></script>
     <script>
-        // 创建一个购物车
-        var cart = new ShoppingCart();
+         // 创建一个购物车
+         var cart = new ShoppingCart();
         cart.clearCart();
         // 创建一个商品
         var product = new Product("01", "青蛙", "01.png", 59.9)
@@ -39,14 +37,9 @@
         // 将新商品加入购物车
         cart.addToCart(order);
 
-        console.log(cart.getSelectedQty());
-        console.log(cart.getSelectedAmount());
-
-        // cart.setItemSelectStatus('03', true);
-        // console.log(cart.getSelectedQty());
-        // console.log(cart.getSelectedAmount());
-
+     console.log(cart.getSelectedQty());
+     console.log(cart.getSelectedAmount());
+      
     </script>
 </body>
-
 </html>
