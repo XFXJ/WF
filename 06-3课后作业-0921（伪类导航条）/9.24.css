@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.new{
+    width: 720px;
+    height: 50px;
+    border: 1px solid saddlebrown;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+.new ul{
+    /*去掉小圆点*/
+    list-style: none;
+}
+.new ul li{
+    float: left;
+    width: 120px;
+    
+    text-align: center;
+    line-height: 50px;
+}
+.new li a{
+    display:block;
+    width: 120px;
+    height: 50px;
+}
+.new ul li a:link , .new ul li a:visited{
+    text-decoration: none;
+    background-color:darksalmon;
+    color:darkgoldenrod;
+    border-right: 1px solid darkblue;
+}
+.new ul li a:hover{
+    background-color: grey;
+}
+.new ul li  a.noe{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.new ul li a.nme{
+    border-right:0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+}

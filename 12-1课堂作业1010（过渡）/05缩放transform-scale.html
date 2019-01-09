@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>scale()方法</title>
+<style type="text/css"> 
+div{
+	margin:100px auto;
+	width:100px;
+	height:60px;
+	background-color:#FF0;
+
+	overflow: hidden;
+}
+p{
+	width:100px;
+	height:50px;
+	transition:all 2s ease;
+}
+p:hover{
+	transform:scale(2,3);
+	-ms-transform:scale(2,3);        /* IE9浏览器兼容代码 */
+	-webkit-transform:scale(2,3);    /*Safari and Chrome浏览器兼容代码*/
+	-moz-transform:scale(2,3);       /*Firefox浏览器兼容代码*/
+	-o-transform:scale(2,3); 
+}
+#div2{
+	margin:100px;
+	transform:scale(2,3);
+	-ms-transform:scale(2,3);        /* IE9浏览器兼容代码 */
+	-webkit-transform:scale(2,3);    /*Safari and Chrome浏览器兼容代码*/
+	-moz-transform:scale(2,3);       /*Firefox浏览器兼容代码*/
+	-o-transform:scale(2,3);        /*Opera浏览器兼容代码*/
+}
+div:hover
+{
+	transform:scale(2,3);
+	-ms-transform:scale(2,3);        /* IE9浏览器兼容代码 */
+	-webkit-transform:scale(2,3);    /*Safari and Chrome浏览器兼容代码*/
+	-moz-transform:scale(2,3);       /*Firefox浏览器兼容代码*/
+	-o-transform:scale(2,3); 
+}
+</style>
+</head>
+<body>
+<div><p> 我是原来的元素</p></div>
+ <!--<div id="div2">我是放大后的元素</div>-->
+</body>
+</html>

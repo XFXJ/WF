@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nem{
+    width: 500px;
+    height: 300px;
+    border: 1px solid saddlebrown;
+    margin: 10px;
+    overflow: hidden;
+}
+.nem ul
+{
+    list-style: none;
+}
+
+.nem ul li 
+{
+    overflow: hidden;
+    _zoom:1;
+    border-bottom: 1px dashed darkblue;
+}
+
+.nem ul li span.title
+{
+    float: left;
+}
+
+.nem ul li span.date
+{
+    float: right;
+}

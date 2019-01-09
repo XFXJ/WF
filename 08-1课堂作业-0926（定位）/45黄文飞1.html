@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    div,h2{
+        margin: 0;
+        padding: 0;
+    }
+      .tring{
+          position: absolute;
+          z-index: 1;
+          top: 15px;
+          right: 0;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-width: 3px;
+          border-style: solid;
+          border-color: aqua transparent
+          transparent aqua;   
+            }
+            .land
+            {
+                position: absolute;
+                z-index: 9;
+                 right: 0px;
+                  top: 6px;
+                 display: inline-block;
+                 padding: 0 2px;
+                height: 15px;
+                 line-height: 15px;
+                 background-color: lightsalmon;
+                 color: aliceblue;
+  
+            }
+            
+            .mod{
+        
+                 height: 36px;
+                  border-bottom: 2px solid #3983e5;
+                 text-align: left;
+            }
+            .mod .title {
+    font: 16px/26px "Microsoft YaHei", "SimHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+}
+mod .title .current{
+    
+    cursor: default;
+}
+mod .title .current,.title span:hover{
+    
+   color:fuchsia;
+}
+
+mod .title .current i{
+    display: inline-block;
+}
+.mod .title i {
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: 3px;
+    display: none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+    border-bottom: 6px solid #3983e5;
+    border-top: 0 none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.mod .title span
+{
+position: relative;
+bottom: -4px;
+float: left;
+height: 36px;
+line-height: 30px;
+color: #06c;
+margin-right: 30px;
+cursor: pointer;
+}
+.mod .title .land{
+    top: -10px;
+    right: -7px;
+    font-weight: normal;
+}
+
+    </style>
+    
+</head>
+<body>
+   <div class="mod">
+       <h2 class="title">
+        <span class="current">
+            周边游
+            <i></i>
+        </span>
+        <span> 
+            邮轮
+            <i></i>
+        </span>
+        <span>
+            门票
+            <i></i>
+        </span>
+        <span>
+           境内游
+            <i></i>
+        </span>
+        <span>
+            主题游 
+            <i></i>
+            <b class="land">
+                <em>NEW</em>
+                <em class="tring"></em>
+            </b>
+        </span>
+        </h2>
+</div>
+</body>
+</html>

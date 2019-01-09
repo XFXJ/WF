@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>携程</title>
+    <style type="text/css">
+     div,
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+        .mod {
+        width: 1180px;
+        margin: 28px auto 0;
+        height: 36px;
+        border-bottom: 2px blue solid;
+        text-align: left;
+    }
+
+    .mod .title {
+    font: 16px/26px "Microsoft YaHei", "SimHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    }
+    .mod .title .current, .title span:hover {
+    color: #06c;
+    cursor: default;
+    }
+    .mod .title span {
+         position: relative;
+         bottom: -3px;
+         float: left;
+         height: 36px;
+         line-height: 30px;
+         columns: #333;
+         margin-right: 30px;
+        cursor: pointer;
+    }   
+    .mod .title .current i {
+            display: inline-block;
+        }
+        .mod .title i {
+            position: absolute;
+            left: 50%;
+            margin-left: -6px;
+            bottom: 3px;
+            display: none;
+            border-bottom: 6px solid #3983e5;
+            border-top: 0 none;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+        }
+        
+        .mod .label-en {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            display: inline-block;
+            background-color: orange;
+            color: #fff;
+            font-weight: normal;
+            padding: 0 2px;
+            font-size: 8px;
+            line-height: 16px;
+
+        }
+        .mod .triangle {
+            position: absolute;
+            z-index: 1;
+            top: 17px;
+            right: 0;
+            display: inline-block;
+            border-width: 3px;
+            border-style: solid;
+            border-color:orange transparent transparent orange;
+        }
+.con {
+    width: 1178px;
+    height: 390px;
+    border-left: 1px dotted #333;
+}
+.con .entrance {
+    position: relative;
+    
+    display: inline;
+  
+    padding: 0 20px 15px;
+    overflow: hidden;
+
+}
+.entrance dd{
+    margin-left: -10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    zoom: 1;
+}
+.entrance .entrance-item{
+    position: relative;
+    float: left;
+    display: block;
+    border-left: 1px solid #ececec;
+    padding: 0 10px;
+    line-height: 18px;
+    height: 18px;
+    margin: 7px 0;
+    *margin: 8px 0;
+}
+
+
+
+    </style>
+</head>
+<body>
+<div class="mod">
+    <div class="mod-hd">
+        <h2 class="title">
+          <span class="current" idx="999" dcity="4">热门<i></i></span>
+          <span class="">特卖汇<i></i></span>
+          <span >出境游<i></i></span>
+          <span >境内游<i></i></span>
+          <span >周边游<i></i></span>
+          <span >邮轮<i></i></span>
+          <span >门票<i></i></span>
+          <span >主题游<i></i><b class="label-en"><em>NEW</em><em class="triangle"></em></b></span>
+          <span >高端游</span>
+        </h2>
+    </div>
+</div>
+<div class="con">
+    <div class="entrance">
+        <dl>
+            <dt>户外活动</dt>
+            <dd>
+                <span class="entrance-item" target=""_blank>徒步登山</span>
+                <span class="entrance-item">潜水</span>
+                <span class="entrance-item">高尔夫</span>
+                <span class="entrance-item">骑行</span>
+                <span class="entrance-item">游艇</span>
+                <span class="entrance-item">高空项目</span>
+                <span class="entrance-item">滑雪</span>
+                <span class="entrance-item">马拉松</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>人文探索</dt>
+            <dd>
+                <span class="entrance-item">深度摄影</span>
+                <span class="entrance-item">越野自驾</span>
+                <span class="entrance-item">极限探索</span>
+            </dd>
+        </dl>
+    
+    </div>
+</div>
+</body>
+</html>

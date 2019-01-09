@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字体效果</title>
+    <style>
+    body{
+        padding:200px;
+        color:rgb(2, 15, 29);
+        margin:  0 auto ;
+    }
+    span{
+        width: 50px;
+        height: 80px;
+        margin:  0 auto ;
+        font-size: 60px;
+        display:block;
+        position: relative;
+    }
+    span:before,span:after
+    /* 在每个<p>元素之前插入内容 在每个<span>元素之后插入内容 */
+    {
+        content:attr(data-q);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform-origin: left center;
+        transition:all 0.3s linear 0s;
+    }
+    span:before{
+        color:rgb(196, 177, 177);
+        z-index: 3;
+        transform:rotateY(15deg);
+    }
+    span:after{
+        color:rgba(0,0,0,0.3);
+        z-index:2;
+        transform: rotateY(0deg) scale(1.1, 1);
+                                  /* 定义2d缩放 */
+    }
+    span:hover:before{
+        transform:rotateY(40deg) skew(0deg, 3deg);
+    }
+    span:hover:after{
+        transform:rotateY(40deg) skew(0deg,20deg);
+        /* 定义3d旋转沿着y轴     定义沿着x和y轴2d倾斜旋转 */
+    }
+    </style>
+</head>
+<body>
+    <span data-q="小">小</span>
+	<span data-q="牛">牛</span>
+	<span data-q="别">别</span>
+	<span data-q="走">走</span>
+	<span data-q="给">给</span>
+	<span data-q="歌">歌</span>
+	<span data-q="回">回</span>
+	<span data-q="头">头</span>
+</body>
+</html>

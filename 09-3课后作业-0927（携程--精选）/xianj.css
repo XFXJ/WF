@@ -1,0 +1,90 @@
+
+.mod{
+width: 945px;
+/*height: 367px;*/
+margin: 20px auto ;
+/* background-color: #eee;*/
+ overflow: hidden;
+
+}
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button {
+margin: 0;
+padding: 0;
+}
+body {
+font: 12px/1.5 "Microsoft yahei", arial, Simsun, sans-serif;
+color: #333;
+background-color: #fff;
+}
+ul{
+list-style: none;
+}
+a{
+color: #3983e5;
+text-decoration: none;
+}
+.mod .top
+{
+height: 54px;
+background-color:blue;
+}
+.mod .mod-content
+{
+height: 312px;
+border: 1px solid #e0e0e0;
+border-top-width: 0px;
+position: relative;
+overflow: hidden;
+}
+.mod .left{
+float: left;
+width: 182px;
+height: 312px;
+border-right: 1px dotted #a3a3a3;
+}
+.mod .right{
+/*float: left;*/
+/* width: 759px;*/
+height: 312px;
+/*background-color: #fff;*/
+padding: 12px 17px 13px 15px;
+margin-left: 184px;
+}
+.mod .right li.atcive
+{
+width: 37px;
+height: 16px;
+background-color: #3983e5;
+border-radius: 2px;
+text-align: center;
+line-height: 16px;
+/*font-weight: bold;*/
+}
+.mod  li.atcive a{
+font-size: 10px;
+color: #fff;
+}
+.mod .right .more
+{
+position: absolute;
+top: 12px;
+right: 17px;
+padding: 2px 10px;
+}
+.mod .right .more:hover{
+border: 1px solid #3983e5;
+border-radius: 5px;
+}
+.mod .product{
+margin-top: 8px;
+overflow: hidden;
+}
+.mod .product li
+{
+float: left;
+width: 176px;
+height: 127px;
+margin: 0px 5px 5px 0px;
+background-color: #777;
+}
